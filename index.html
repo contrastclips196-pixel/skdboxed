@@ -8,48 +8,105 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial;
-    background: #0a0f2c;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #0d1b3d, #050816);
     color: white;
-    text-align: center;
 }
 
+/* HEADER */
 header {
-    background: linear-gradient(90deg, #0066ff, #00ccff);
-    padding: 60px 20px;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0066ff, #00ccff);
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.15);
+    filter: blur(60px);
+    border-radius: 50%;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
 }
 
 h1 {
     font-size: 60px;
-    margin: 0;
+    margin: 10px 0;
+    letter-spacing: 3px;
 }
 
 p {
     font-size: 18px;
+    opacity: 0.9;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 30px;
+    padding: 14px 28px;
     background: #00aaff;
     color: white;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,170,255,0.4);
 }
 
 .btn:hover {
+    transform: scale(1.05);
     background: #0088cc;
 }
 
+/* SECTIONS */
 .section {
-    padding: 50px 20px;
+    padding: 60px 20px;
+    text-align: center;
 }
 
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 25px;
+    width: 250px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.08);
+}
+
+/* FOOTER */
 footer {
     padding: 20px;
+    text-align: center;
     background: #050818;
+    opacity: 0.7;
 }
 </style>
 </head>
@@ -57,23 +114,45 @@ footer {
 <body>
 
 <header>
+    <!-- LOGO TAU -->
+    <img class="logo" src="image(23).png" alt="SKD Logo">
+
     <h1>SKD BOXED</h1>
     <p>Server PvP Box - lupte intense și comunitate activă</p>
+
     <a class="btn" href="https://discord.gg/HXP3W5HmBS">Intră pe Discord</a>
 </header>
 
 <div class="section">
-    <h2>Despre Server</h2>
-    <p>Box PvP competitiv, evenimente zilnice și staff activ.</p>
+    <h2>🔥 Despre Server</h2>
+    <p>Box PvP competitiv, evenimente zilnice și staff activ non-stop.</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>⚔ PvP Intens</h3>
+            <p>Lupte rapide și competiții serioase.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎉 Evenimente</h3>
+            <p>Daily events și premii pentru jucători.</p>
+        </div>
+
+        <div class="card">
+            <h3>🛡 Staff Activ</h3>
+            <p>Moderatori online constant pentru ordine.</p>
+        </div>
+    </div>
 </div>
 
 <div class="section">
-    <h2>Discord</h2>
+    <h2>💬 Discord</h2>
+    <p>Intră în comunitatea noastră și fă parte din echipă!</p>
     <a class="btn" href="https://discord.gg/HXP3W5HmBS">Join Discord</a>
 </div>
 
 <footer>
-    © 2026 SKD Boxed
+    © 2026 SKD Boxed - All Rights Reserved
 </footer>
 
 </body>
